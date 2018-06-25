@@ -1,14 +1,14 @@
-import React from "react";
-import Footer from "./Footer";
-import AddTodo from "../containers/AddTodo";
-import VisibleTodoList from "../containers/VisibleTodoList";
+import React from 'react';
+import Footer from './Footer';
+import AddTodo from '../containers/AddTodo';
+import VisibleTodoList from '../containers/VisibleTodoList';
 
 const styles = {
-  marginTop: "50px",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center"
+  marginTop: '50px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center'
 };
 
 const App = () => (
@@ -17,6 +17,7 @@ const App = () => (
     <AddTodo />
     <VisibleTodoList />
     <Footer />
+    <p>Built with: {process.env.REACT_APP_RENDER_TYPE}</p>
   </div>
 );
 

@@ -18,6 +18,7 @@ const App = () => (
     <AddTodo />
     <VisibleTodoList />
     <VisibilityFilters />
+    <p>Built with: {process.env.REACT_APP_RENDER_TYPE}</p>
   </div>
 );
 
