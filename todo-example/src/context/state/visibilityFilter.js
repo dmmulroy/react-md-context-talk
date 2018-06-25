@@ -1,12 +1,18 @@
-import React from "react";
+import React from 'react';
+
+import visibilityFilter from '../constants/visibilityFilters';
 
 const { Provider, Consumer } = React.createContext();
 
 class VisibilityFilterProvider extends React.Component {
-  state = {
-    visibilityFilter: "all",
-    setVisibilityFilter: this.setVisibilityFilter
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visibilityFilter: visibilityFilter.SHOW_ALL,
+      setVisibilityFilter: this.setVisibilityFilter
+    };
+  }
 
   setVisibilityFilter = visibilityFilter => this.setState({ visibilityFilter });
 
@@ -16,7 +22,4 @@ class VisibilityFilterProvider extends React.Component {
 }
 
 export default VisibilityFilterProvider;
-export {
-  Consumer as VisibilityFilterConsumer,
-  VisibilityFilterProvider as Provider
-};
+export { Consumer, VisibilityFilterProvider as Provider };

@@ -1,27 +1,38 @@
-import React from "react";
-import { connect } from "react-redux";
-import { addTodo } from "../actions";
+import React from 'react';
+import { connect } from 'react-redux';
+import { addTodo } from '../actions';
 
-const AddTodo = ({ dispatch }) => {
-  let input;
+class AddTodo extends React.Component {
+  state = {
+    text: ''
+  };
 
-  return (
-    <div>
-      <form
-        onSubmit={e => {
-          e.preventDefault();
-          if (!input.value.trim()) {
-            return;
-          }
-          dispatch(addTodo(input.value));
-          input.value = "";
-        }}
-      >
-        <input ref={node => (input = node)} />{" "}
-        <button type="submit">Add Todo</button>
+  onTextChange = e => {
+    const { value = '' } = e.target;
+    this.setState({ text: value });
+  };
+
+  onAddTodo = e => {
+    const { addTodo } = this.props;
+    const { text } = this.state;
+    e.preventDefault();
+
+    addTodo(text);
+    this.setState({ text: '' });
+  };
+
+  render() {
+    const { text } = this.state;
+    return (
+      <form>
+        <input type="text" onChange={this.onTextChange} value={text} />{' '}
+        <button onClick={this.onAddTodo}>Add Todo</button>
       </form>
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default connect()(AddTodo);
+export default connect(
+  () => ({}),
+  { addTodo }
+)(AddTodo);

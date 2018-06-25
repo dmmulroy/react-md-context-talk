@@ -1,11 +1,22 @@
-import React from "react";
+import React from 'react';
 
 const { Provider, Consumer } = React.createContext();
 
+let idCounter = 0;
 class TodoProvider extends React.Component {
-  addTodo = ({ id, text, completed = false }) =>
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      todos: [],
+      addTodo: this.addTodo,
+      toggleTodo: this.toggleTodo
+    };
+  }
+
+  addTodo = text =>
     this.setState(({ todos }) => ({
-      todos: todos.concat({ id, text, completed })
+      todos: todos.concat({ id: idCounter++, text, completed: false })
     }));
 
   toggleTodo = id =>
@@ -15,12 +26,6 @@ class TodoProvider extends React.Component {
           todo.id === id ? { ...todo, completed: !todo.completed } : todo
       )
     }));
-
-  state = {
-    todos: [{ id: 1, text: "default", completed: false }],
-    addTodo: this.addTodo,
-    toggleTodo: this.toggleTodo
-  };
 
   render() {
     return <Provider value={this.state}>{this.props.children}</Provider>;

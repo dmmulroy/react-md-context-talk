@@ -18,7 +18,11 @@
     "eject": "react-scripts eject",
     "test": "react-scripts test"
   },
-  "keywords": ["react", "context", "javascript", "redux"],
-  "description":
-    "Learn how to replace a simple Redux implementation with React's context APi."
+  "keywords": [
+    "react",
+    "context",
+    "javascript",
+    "redux"
+  ],
+  "description": "Learn how to replace a simple Redux implementation with React's context APi."
 }
