@@ -1,14 +1,19 @@
 import React from 'react';
-
 import VisibilityFilterButton from './VisibilityFilterButton';
-import visibilityFilters from '../constants/visibilityFilters';
+import { VisibilityFilters as visibilityFilters } from '../actions';
+
+const filterDisplayName = {
+  SHOW_ALL: 'All',
+  SHOW_COMPLETED: 'Completed',
+  SHOW_ACTIVE: 'Active'
+};
 
 const VisibilityFilters = () => (
   <div>
     <span>Show: </span>
     {Object.values(visibilityFilters).map(visibilityFilter => (
       <VisibilityFilterButton filter={visibilityFilter}>
-        {visibilityFilter}
+        {filterDisplayName[visibilityFilter]}
       </VisibilityFilterButton>
     ))}
   </div>

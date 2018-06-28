@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './Footer';
+import VisibilityFilters from './VisibilityFilters';
 import AddTodo from '../containers/AddTodo';
 import VisibleTodoList from '../containers/VisibleTodoList';
 
@@ -16,7 +16,7 @@ const App = () => (
     <h1>YATA - Yet Another ToDo App</h1>
     <AddTodo />
     <VisibleTodoList />
-    <Footer />
+    <VisibilityFilters />
     <p>Built with: {process.env.REACT_APP_RENDER_TYPE}</p>
   </div>
 );
