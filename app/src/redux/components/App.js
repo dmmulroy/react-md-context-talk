@@ -1,7 +1,7 @@
 import React from 'react';
 import VisibilityFilters from './VisibilityFilters';
-import AddTodo from '../containers/AddTodo';
-import VisibleTodoList from '../containers/VisibleTodoList';
+import AddTodo from '../components/AddTodo';
+import VisibleTodoList from '../components/VisibleTodoList';
 
 const styles = {
   marginTop: '50px',
@@ -17,7 +17,7 @@ const App = () => (
     <AddTodo />
     <VisibleTodoList />
     <VisibilityFilters />
-    <p>Built with: {process.env.REACT_APP_RENDER_TYPE}</p>
+    <p>Built with: Redux</p>
   </div>
 );
 

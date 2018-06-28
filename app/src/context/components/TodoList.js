@@ -19,7 +19,18 @@ const getFilteredTodos = (todos, visibilityFilter) => {
 const TodoList = ({ todos, visibilityFilter }) => {
   const filteredTodos = getFilteredTodos(todos, visibilityFilter);
 
-  return <ul>{filteredTodos.map(todo => <Todo key={todo.id} {...todo} />)}</ul>;
+  return (
+    <ul>
+      {filteredTodos.map(todo => (
+        <Todo
+          key={todo.id}
+          id={todo.id}
+          text={todo.text}
+          completed={todo.completed}
+        />
+      ))}
+    </ul>
+  );
 };
 
 export default TodoList;
