@@ -1,0 +1,9 @@
+- Create the Todo Context + TodoContextProvider
+
+- Show Completed VisibilityFilter Context + TodoContextProvider
+
+- Add Providers to the Root/Index Component
+
+- Finish creating the VisbileTodoList (Visibility + Todo Consumers) and Todo Components (Todo Consumer for toggleTodo)
+
+- Show Completed VisibilityFilters + VisibilityFilterButton
