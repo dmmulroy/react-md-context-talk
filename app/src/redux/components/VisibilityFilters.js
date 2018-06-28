@@ -12,7 +12,7 @@ const VisibilityFilters = () => (
   <div>
     <span>Show: </span>
     {Object.values(visibilityFilters).map(visibilityFilter => (
-      <VisibilityFilterButton filter={visibilityFilter}>
+      <VisibilityFilterButton key={visibilityFilter} filter={visibilityFilter}>
         {filterDisplayName[visibilityFilter]}
       </VisibilityFilterButton>
     ))}
