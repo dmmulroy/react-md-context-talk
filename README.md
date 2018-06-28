@@ -1,1 +1,1 @@
-# You might not Redux; a little context.
+# You might not need Redux; a little context.
