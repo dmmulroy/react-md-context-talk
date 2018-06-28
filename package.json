@@ -1,0 +1,21 @@
+{
+  "name": "react-md-context-talk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "start:redux": "npm start --prefix app",
+    "start:context": "npm run start:context --prefix app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmmulroy/react-md-context-talk.git"
+  },
+  "author": "Dillon Mulroy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmmulroy/react-md-context-talk/issues"
+  },
+  "homepage": "https://github.com/dmmulroy/react-md-context-talk#readme"
+}
