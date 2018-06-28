@@ -18,3 +18,6 @@ class TodoProvider extends React.Component {
 }
 
 export default TodoProvider;
+
+const Consumer = () => {};
+export { Consumer };
