@@ -1,5 +1,5 @@
 # You might not need Redux; A little context.
-
+> Learn how you can use React 16.3's new Context API instead of Redux (or MobX) to handle your applications state and avoid "prop drilling"
 ## Running The App:
 
 ### Redux Version
